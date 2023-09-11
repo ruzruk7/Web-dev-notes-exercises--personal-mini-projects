@@ -1,0 +1,130 @@
+/* 
+ADDING CSS TO HTML
+  INLINE   <tag style="css"/>
+    <html style="property_to_change:Value_of_property"></html>
+
+    useful when you only want to target a single element
+    good for adding only single attributes to the page    this method is not recommeded for the entire document
+    always goes in only the OPENING tag of any element
+
+  INTERNAL    <style>css</>
+    <html>
+      <head>
+        <style>    CSS
+          tag {property:value;}       internal style can be applied anywhere within the same html document
+          
+          selector {property:value} the css goes inbetween the {css} on multiple lines in between
+            this method is good when you want to only apply the style to one html document. 
+            not good to use with mutlipage websites.
+      
+        </style>  CSS
+      </head>
+    </html>
+
+ 
+  EXTERNAL  <link href="style.css"/>
+  <html>
+    <head>
+      <link   CSS
+      rel="stylesheet"  the role of what we are linking too
+      href="./style.css"    where is it located
+
+        the css lives in a different file. 
+        this style is what is most commonly used in webdev
+
+      />     CSS
+    </head>
+  </html>
+/*
+
+
+CSS SELECTORS
+/*this is element selector e.g p-element*/
+p {color: rgb(0, 0, 0);} 
+
+/*this is class selector  */
+.class {font-size:20px;} 
+
+/*this is id selecter*/
+#id-name {color: green;} 
+
+/*this is element with specific attribute selector*/
+li[value="4"]{color: blue} 
+
+/*universal selector*/
+ *{text-align: center;} 
+
+
+/* FONT PROPERTIES
+change font size with px amount
+pt   = stands for points slightly bigger than px. in MS word you are settings a font point
+1em   = 1 full width of letter m | when h1 is set like 1em will be 100% the size of parent tag like <body><h1></h1></body>
+1rem   = relative to the root html element like the opening <html> (the tag that encloses the entire document)
+
+FONT SIZE  */
+#pixel {font-size: 20px;}
+  #point {font-size: 20pt;}
+  #em {font-size: 1em;}
+  #rem {font-size: 1rem;}
+  footer {font-size: 12pt;}
+  html {font-size: xx-large;}
+
+
+/*FONT-FAMILY
+determines what you want your text to look like
+we write  {font-family: 1st choice font, backup font}
+
+fonts.google.com has loads of diferent fonts
+download the font make sure link is selected
+in the head element after the <style> paste in the 
+*/
+#helvetica {font-family: Helvetica, sans-serif;}
+#arial {font-family: Arial, sans-serif;}
+#serif {font-family: serif;}
+#sans-serif {font-family: sans-serif;}
+#cursive {font-family: cursive;}
+#monospace {font-family: monospace;}
+#fantasy {font-family: fantasy;}
+
+
+/*FONT WEIGHT 
+keywords = normal:, bold;, bolder;
+relative to parent tag = lighter;, bolder;  = subtracts and adds 100
+number = 100-900;  = how light or how bold you want the font to be
+*/
+#font-weight {font-weight: bold;}
+
+
+h1 {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+/*TEXT ALIGN
+change the alignment of the text
+*/
+#text_align {text-align: right}
+
+
+/*BOX MODEL
+we can set {width:number-px;} 
+           {height:number-%;} will change to take up number-% of the page
+we can set borders as well:   
+{border: thickness-px style(dashed/solid) color(any name color);
+  border-width: top-px right-px   bottom-px left-px;  
+   can also do     top/bottom           left/right; 
+}
+the border does not change the height of the. the sequential typing of these 
+
+PADDING   tag{padding: 0px;}
+adds padding between element and the border line.
+Sits between the element and border
+
+MARGIN tag{margin: 10px;}
+adds a invisible margin after the border
+
+
+
+*/
