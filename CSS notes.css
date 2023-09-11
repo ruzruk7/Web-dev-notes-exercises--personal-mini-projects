@@ -111,6 +111,7 @@ change the alignment of the text
 /*BOX MODEL
 we can set {width:number-px;} 
            {height:number-%;} will change to take up number-% of the page
+           
 we can set borders as well:   
 {border: thickness-px style(dashed/solid) color(any name color);
   border-width: top-px right-px   bottom-px left-px;  
