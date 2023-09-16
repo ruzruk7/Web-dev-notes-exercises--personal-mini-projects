@@ -125,7 +125,107 @@ Sits between the element and border
 
 MARGIN tag{margin: 10px;}
 adds a invisible margin after the border
+*/
 
 
 
+/*
+SPECIFICITY and INHERITENCE 
+determines which rule will apply to the element when multiple rules are at play.
+The Ranking of each element is synonymous with importance over previous rules.
+ so  a TYPE selector will beat  the latest of a selector
+
+POSITION:
+later CSS styles in a CSS selector will prevail over the top ones
+li { color: red;  --- 2
+     color: blue; --- 1 
+   }
+
+SELECTOR SPECIFICTY:
+li {color:blue;}            ---4 element selector
+.first-class{color:red;}    ---3 class selecter 
+li[draggable] {color: red;} ---2 attribute
+#first-id {color: Orange;}  ---1 id selector. generally in a file only 1 id will be used for a particular style. hence it is most specific
+
+TYPE:
+Depending on what type of css stlying type you are using:
+<link rel="stylesheet" href="./stylesheet.css"> ---3 external 
+<style> CSS </style>                            ---2 internal 
+<h1 style="CSS">content</h1>                    ---1 inline 
+
+IMPORTANCE:
+where you place the " CSS: style !important;" rule in
+h1 {color : green;
+    color: blue !important;
+    }
+the color will be blue 
+*/
+
+/* 
+COMBINING CSS SELECTORS
+allows you to 
+GROUP rule: --- Applies everything to each of the selector elements
+selector, selector {color: blue;}
+html: <body>
+        <h1>blueviolet text</h1>
+        <h2>blueviolet text</h2>
+      </body>
+CSS: h1, h2 {color: blueviolet;}
+
+CHILD: ---Apply to direct child of left side
+parent_selector > child_selector {
+ color:firebrick 
+}
+html: <div>
+        <ol>
+          <li>purple text</li>
+        </ol>
+      </div>
+CSS: div > li {color: purple;}
+
+DECENDANT: ---Apply to a decendent selector this is better than the parent-child selector.
+ancestor_selector decendant_selector {
+  color:blue
+  }
+  html: <div class="box">
+          <h1>red text</h1>
+        </div>
+  CSS: .box h1 {color: red;}
+
+CHAINING: --- Apply where all selectors are true
+element selectors must go first before id and class
+selectorselector {
+  color:green;
+  }  
+  html: <h1 id="title" class="big heading"> blue text</h1>
+  CSS : h1#title.big.heading {
+    color: blue;}
+
+
+COMBINING COMBINERS
+ancestor chained_selector_selector {font-size: 0.5rem;}
+ */
+
+
+
+/* 
+CSS POSITIONING syntax= element {position: position_type;}
+STATIC: HTML default flow.
+Each item is positioned at the bottom of the prior element
+
+RELATIVE: Position relative to default position
+you can move the element to a new place relative to its original position.
+relative specifically to its original position
+CSS box {position: relative;
+         left: 50px;
+         top: 50px;
+        }
+
+ABSOLUTE: Position relative to nearest positioned ancestor or top left corner of webpage
+z-index changes the overlay effect of the element
+element {z-index: int;} the default is set to 0
+
+
+FIXED: position relative to the top left corner of the browser window. scrolling will not change the position of this element
+ 
 */
