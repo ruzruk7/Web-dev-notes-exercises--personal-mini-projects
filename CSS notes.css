@@ -106,6 +106,8 @@ h1 {
 change the alignment of the text
 */
 #text_align {text-align: right}
+#div_circle {border-radius: 50%;}
+
 
 
 /*BOX MODEL
@@ -161,6 +163,9 @@ h1 {color : green;
 the color will be blue 
 */
 
+
+
+
 /* 
 COMBINING CSS SELECTORS
 allows you to 
@@ -173,9 +178,7 @@ html: <body>
 CSS: h1, h2 {color: blueviolet;}
 
 CHILD: ---Apply to direct child of left side
-parent_selector > child_selector {
- color:firebrick 
-}
+parent_selector > child_selector {color: firebrick;}
 html: <div>
         <ol>
           <li>purple text</li>
@@ -184,9 +187,8 @@ html: <div>
 CSS: div > li {color: purple;}
 
 DECENDANT: ---Apply to a decendent selector this is better than the parent-child selector.
-ancestor_selector decendant_selector {
-  color:blue
-  }
+ancestor_selector decendant_selector {color:blue}
+
   html: <div class="box">
           <h1>red text</h1>
         </div>
