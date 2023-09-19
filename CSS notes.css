@@ -228,6 +228,77 @@ z-index changes the overlay effect of the element
 element {z-index: int;} the default is set to 0
 
 
-FIXED: position relative to the top left corner of the browser window. scrolling will not change the position of this element
+FIXED: position relative to the top left corner of the browser window. scrolling will not change the position of this element 
+*/
+
+
+/* CSS DISPLAYS synax= element {display: property}
+PROPERTY:
+:inline = will make the element appear in the same line until no newer lines can be fit to the width of the elements.
+        the property will stretch to fit the entire element
+
+:block = elements will go on to the next line irrelavent if space is empty still in the first line.
+
+:inline-block = inline part allows us to have parts of element on same line
+                block part allows us to set the width and height. to help us determine the layout of our website
+
+:None = will make the element dissapear 
+
+ */
+
+
+ /* CSS FLOAT syntax = element {float: left; right;}
+ causes the image element to squeeze next to the text 
+
+to make the footer not wrap around the image. footer {clear: left; right; both;} will cause it to be positioned after the image 
  
+ */
+
+
+
+/*RESPONSIVE WEB DESIGN to sizing
+Media Queries = after sepcifiying a size you put in all css inside the {}
+--------specify----------
+@media (max-width: 600px) {CSS for screens below or equal to 600px wide }
+
+
+
+
+CSS Grid = use a bunch of divs with different alignment, each div.
+grid-template-columns: 1fr 1fr == specifies 2 columns that are 1fraction each one being equal
+grid-template-rows: 100px, 200px, 200px == specifies that the top row should have 100px, second 200px, third 200px.
+gap: 30px == each box should have 30px distance between each other  
+
+
+.first {grid-column: span 2;} == makes the top most coloumn span 2 columns
+html:                                           CSS:                                
+<div class="grid-container">                    .grid-container: {display: grid; grid-template-columns: 1fr 1fr;                              
+  <div class="first card"></div>                                gird-template-rows: 100px, 200px, 200px; gap: 30px;
+  <div class="card"></div>                      .first {grid-column: span 2;}                               
+  <div class="card"></div>                               
+  <div class="card"></div>                      .card {background-color: blue;}                                     
+  <div class="card"></div>                                                            
+  <div class="card"></div>                                                            
+<div class="card"></div>
+</div>
+
+
+
+
+
+CSS Flexbox
+good for 1D layout of your webpage  [] [--] [-] [---]
+
+flex: 2; == means the layout will have 2x the width of 1 unchanged flex
+
+<div class="flex-container>               .flex-container {display: flex;}                                                                
+  <div class="first card"></div>          .card {background: blue; border: 30px solid white;                                                                      
+  <div class="second card"></div>               height: 100px; flex: 1;                                                                     
+  <div class="card"></div>                .first {flex:2;}                                   
+  <div class="card"></div>                .second {flex: 0.5;}                                                  
+  <div class="card"></div>                                                                                                                                                              
+</div>
+
+External frameworks e.g Bootstrap
+
 */
