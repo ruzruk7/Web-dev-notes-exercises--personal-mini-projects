@@ -259,10 +259,7 @@ to make the footer not wrap around the image. footer {clear: left; right; both;}
 /*RESPONSIVE WEB DESIGN to sizing
 Media Queries = after sepcifiying a size you put in all css inside the {}
 --------specify----------
-@media (max-width: 600px) {CSS for screens below or equal to 600px wide }
-
-
-
+@media (max-width: 600px) {element {CSS} for screens below or equal to 600px wide }
 
 CSS Grid = use a bunch of divs with different alignment, each div.
 grid-template-columns: 1fr 1fr == specifies 2 columns that are 1fraction each one being equal
@@ -300,5 +297,43 @@ flex: 2; == means the layout will have 2x the width of 1 unchanged flex
 </div>
 
 External frameworks e.g Bootstrap
+
+*/
+
+
+/* MEDIA QUERY IN_DEPTH
+
+Documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+@media (**) {element {CSS;}}
+**= can be 'max-width' for smaller screens  or 'min-width' for larger screens
+
+can be combined as well
+@media (min-width: 600px) and (max-width: 900px){CSS;}
+will target screens between 600-900px
+
+@media(max-width:600px) and (min-width: 900px){CSS}
+target anything smaller than 00px OR greater than 900 px
+
+
+Device
+@media screen/print(orientation: landscape){CSS;}
+generally not necessary. 
+print is used to target the website when it is being printed
+*/
+
+
+
+/* CSS FLEXBOX
+USE this for overall page layout/structure
+To use flexbox all you have to do is wrap the contents inside <div>s then target
+the <div class="container"> 
+CSS .container {display: flex; gap: 10px;}
+
+the flex property will try to make all your content be displayed inline irrelevent of what type of element yo have inside
+gap:px; allows us to change how much spacing there is between each element.
+by defualt element {display: flex;} will be a block element.
+
+element {display: inline-flex;} makes the element be inline but only to the width of the conetents combined inside
 
 */
