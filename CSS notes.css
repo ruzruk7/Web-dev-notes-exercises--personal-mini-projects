@@ -106,7 +106,7 @@ h1 {
 change the alignment of the text
 */
 #text_align {text-align: right}
-#div_circle {border-radius: 50%;}
+#div_circle {border-radius: 50%;} /* when set to 50%% you make a circle*/
 
 
 
@@ -119,14 +119,15 @@ we can set borders as well:
   border-width: top-px right-px   bottom-px left-px;  
    can also do     top/bottom           left/right; 
 }
-the border does not change the height of the. the sequential typing of these 
 
 PADDING   tag{padding: 0px;}
 adds padding between element and the border line.
 Sits between the element and border
 
 MARGIN tag{margin: 10px;}
-adds a invisible margin after the border
+adds a invisible margin after the border]
+
+css position property is outside of margin
 */
 
 
@@ -135,7 +136,7 @@ adds a invisible margin after the border
 SPECIFICITY and INHERITENCE 
 determines which rule will apply to the element when multiple rules are at play.
 The Ranking of each element is synonymous with importance over previous rules.
- so  a TYPE selector will beat  the latest of a selector
+e.x a TYPE selector will beat  the latest of a selector
 
 POSITION:
 later CSS styles in a CSS selector will prevail over the top ones
@@ -157,8 +158,8 @@ Depending on what type of css stlying type you are using:
 
 IMPORTANCE:
 where you place the " CSS: style !important;" rule in
-h1 {color : green;
-    color: blue !important;
+h1 {color: blue !important;
+    color: green;
     }
 the color will be blue 
 */
@@ -167,8 +168,7 @@ the color will be blue
 
 
 /* 
-COMBINING CSS SELECTORS
-allows you to 
+COMBINING  SELECTORS
 GROUP rule: --- Applies everything to each of the selector elements
 selector, selector {color: blue;}
 html: <body>
@@ -210,10 +210,14 @@ ancestor chained_selector_selector {font-size: 0.5rem;}
 
 
 
+
 /* 
 CSS POSITIONING syntax= element {position: position_type;}
+position property is outside of MARGIN 
+
 STATIC: HTML default flow.
-Each item is positioned at the bottom of the prior element
+Each item is positioned at the bottom of the prior element.
+Stacked starting from top left corner of browser
 
 RELATIVE: Position relative to default position
 you can move the element to a new place relative to its original position.
@@ -223,13 +227,16 @@ CSS box {position: relative;
          top: 50px;
         }
 
-ABSOLUTE: Position relative to nearest positioned ancestor or top left corner of webpage
+ABSOLUTE: Positioned RELATIVE to nearest positioned ancestor or top left corner of webpage if no ancestor exists
 z-index changes the overlay effect of the element
 element {z-index: int;} the default is set to 0
-
+lower z-index will be lower than higher z-index elements
 
 FIXED: position relative to the top left corner of the browser window. scrolling will not change the position of this element 
 */
+
+
+
 
 
 /* CSS DISPLAYS synax= element {display: property}
@@ -245,8 +252,6 @@ PROPERTY:
 :None = will make the element dissapear 
 
  */
-
-
  /* CSS FLOAT syntax = element {float: left; right;}
  causes the image element to squeeze next to the text 
 
@@ -256,18 +261,19 @@ to make the footer not wrap around the image. footer {clear: left; right; both;}
 
 
 
-/*RESPONSIVE WEB DESIGN to sizing
+
+/*RESPONSIVE WEB DESIGN
 Media Queries = after sepcifiying a size you put in all css inside the {}
 --------specify----------
 @media (max-width: 600px) {element {CSS} for screens below or equal to 600px wide }
 
-CSS Grid = use a bunch of divs with different alignment, each div.
+CSS Grid = use a bunch of divs with different alignment, each div. good for 2D layouts (columns and rows)
 grid-template-columns: 1fr 1fr == specifies 2 columns that are 1fraction each one being equal
 grid-template-rows: 100px, 200px, 200px == specifies that the top row should have 100px, second 200px, third 200px.
 gap: 30px == each box should have 30px distance between each other  
 
-
 .first {grid-column: span 2;} == makes the top most coloumn span 2 columns
+
 html:                                           CSS:                                
 <div class="grid-container">                    .grid-container: {display: grid; grid-template-columns: 1fr 1fr;                              
   <div class="first card"></div>                                gird-template-rows: 100px, 200px, 200px; gap: 30px;
@@ -281,10 +287,10 @@ html:                                           CSS:
 
 
 
-
-
 CSS Flexbox
-good for 1D layout of your webpage  [] [--] [-] [---]
+good for 1D layout of your webpage  [--] [----] [-] 
+you divide each box equally thoughout the page. Then you can adjust how much a particular box takes up
+flex 2 will take two times the space of flex 1.
 
 flex: 2; == means the layout will have 2x the width of 1 unchanged flex
 
@@ -297,8 +303,8 @@ flex: 2; == means the layout will have 2x the width of 1 unchanged flex
 </div>
 
 External frameworks e.g Bootstrap
-
 */
+
 
 
 /* MEDIA QUERY IN_DEPTH
@@ -313,7 +319,7 @@ can be combined as well
 will target screens between 600-900px
 
 @media(max-width:600px) and (min-width: 900px){CSS}
-target anything smaller than 00px OR greater than 900 px
+target anything smaller than 600px OR greater than 900 px
 
 
 Device
@@ -330,7 +336,7 @@ To use flexbox all you have to do is wrap the contents inside <div>s then target
 the <div class="container"> 
 CSS .container {display: flex; gap: 10px;}
 
-the flex property will try to make all your content be displayed inline irrelevent of what type of element yo have inside
+the flex property will try to make all your content be displayed inline irrelevent of what type of element you have inside
 gap:px; allows us to change how much spacing there is between each element.
 by defualt element {display: flex;} will be a block element.
 

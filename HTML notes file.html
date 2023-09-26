@@ -1,20 +1,22 @@
-<!--this is a comment--> 
-<!--Download 
-    vscode-icons by vscodeicons.team for icons to show up in explorer
-    Live Preview by microsoft.com to host local server to view your webpages
+<!--
+  Download vscode-icons by vscodeicons.team for icons to show up in explorer
+  Live Preview by microsoft.com to host local server to view your webpages
 
+  HTML DOCUMENTATION https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 
-HTML DOCUMENTATION https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+*********************************NOTES************************************
+<i>italisized text</i>  <b>bolded text</b> 
+
 -->
 
 <!-- HEADING TAGS <h1> </h1>
 stuff inside the opening/closing TAGS (<></>) with the meat between is known as the ELEMENT
 Headings go up to h1-h6 
 DOES AND DONT'S
-NEVER have more than one <h1> tag. if you need another heading then
+NEVER have more than one <h1> tag.
 NEVER skip heading elements <h1> skip to <h3> 
 
-  <footer>content</footer>  footer is used to 
+  <footer>content</footer>  footer is used to keep copyright info
 !-->
 
 <h1>Heading 1</h1>
@@ -80,14 +82,17 @@ NEVER skip heading elements <h1> skip to <h3>
 <!--allows making of hyperlinks -->
 <!--HTML attributes work like this:
 
-    <tag attribute=value> text </tag>
+    <a attribute=value> text </a>
 
 You can have as many attributes as you want you simply need to put a space in between
 
-    <tag attribute1=value attribute2=value>text</a>
+    <a attribute1=value attribute2=value>text</a>
 
 The HREF attribute styles the text as a link
-you can apply GLOBAL attributes to any given element
+you can apply GLOBAL attributes to any given element. these attributes can be used on all elements.
+
+GLOBAL attributes documentation: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+
 -->
 
 <a draggable=True href="HTTPS://www.website.com">website</a>
@@ -110,16 +115,13 @@ The alt= attribute is necessary-->
 <!--building multiple webpages-->
 <!--requires having multiple .html files. an html for each page-->
 <hr/>
-<hr/>
-
-
 <!--HTML BOILERPLATE-->
 <!--All html files should look like this***-->
 <!DOCTYPE html> <!--tells the browser which version the html is written in-->
-<html lang="en"><!--root of the document. everything goes inside thise open/closing tag-->
+<html lang="en"><!--root of the document. everything goes inside this open/closing tag-->
   <head><!--Import info about the website that wont be displayed to user. but stuff important for proper loading-->
     <meta charset="UTF-8"><!--allows that all characters render properly-->
-    <title>My Website</title><!--what getsdisplayed at the tab area-->
+    <title>My Website</title><!--what gets displayed at the tab area-->
   </head>
   <body><!--all of the content of the webiste (photos,text,links...etc). the mea of the website lives-->
     <h1>Hello World!</h1>
@@ -155,7 +157,7 @@ The alt= attribute is necessary-->
         <style>    CSS
           tag {property:value;}       internal style can be applied anywhere within the same html document
           
-          selector {property:value} the css goes inbetween the {css} on multiple lines in between
+          selector {property:value}
             this method is good when you want to only apply the style to one html document. 
             not good to use with mutlipage websites.
       
@@ -183,7 +185,6 @@ The alt= attribute is necessary-->
   <a href="5.1+Adding+CSS/external.html">external style</a>
   <a href="5.1+Adding+CSS/inline.html">inline style</a>
   <a href="5.1+Adding+CSS/internal.html">internal style</a>
-  <!-- Create 3 Links to The 3 Webpages: inline, internal and external -->
 </body>
  
 
@@ -194,8 +195,8 @@ The alt= attribute is necessary-->
   ELEMENT SELECTOR syntax:   html-element {property:value}
 
   CLASS SELECTOR syntax:   .class-name {property:value;}  
-  a class is like an attribute you call the class="class-name" inside a tags opening tag
-  CLASS selectors can be used as many times as you like with as many elements as you want
+  a class is like an attribute you call the class="class-name" inside a tags opening tag.
+  CLASS selectors can be used as many times as you like with as many elements as you want.
 
   ID SELECTOR sentax:   #id_name {property:value}
   the id="id_name" attribute is added to the opening tag of any element
@@ -265,3 +266,5 @@ a chrome extension makes this easier : https://chrome.google.com/webstore/detail
 <p>CSS DISPLAY </p>
 
 <a href="./css grid.png">Click here for some starter CSS grid layouts</a>
+<a href="./8.2+Responsiveness/8.2 Responsiveness/index.html">Click here to view differences in CSS Responsiveness via different methods</a>
+
